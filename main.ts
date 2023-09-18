@@ -8,12 +8,15 @@ class calc{
   }
 
   
-  cal():number {
-    return this.number1 + this.number2
+  cal(opreator) {
+    return eval(this.number1+opreator+this.number2)
+    //return this.number1 + this.number2
   }
 }
 
 function calculate(opreator){
-  var cal = new calc(document.getElementById("number1").Value, document.getElementById("number1").ariaValueMax)
-  console.log(document.getElementById("number1").ariaValueNow)
+  var t = document.getElementById("number1") as HTMLInputElement;
+  var y = document.getElementById("number2") as HTMLInputElement;
+  var cal = new calc(t.value, y.value)
+  document.getElementById("result").innerHTML = cal.cal(opreator)
 }
