@@ -8,15 +8,15 @@ class calc{
   }
 
   
-  cal(opreator) {
-    return eval(this.number1+opreator+this.number2)
+  cal(operator) {
+    return eval(this.number1+operator+this.number2)
     //return this.number1 + this.number2
   }
 }
 
-function calculate(opreator){
+function calculate(operator){
   var t = document.getElementById("number1") as HTMLInputElement;
   var y = document.getElementById("number2") as HTMLInputElement;
   var cal = new calc(t.value, y.value)
-  document.getElementById("result").innerHTML = cal.cal(opreator)
+  document.getElementById("result").innerHTML = cal.cal(operator)
 }
